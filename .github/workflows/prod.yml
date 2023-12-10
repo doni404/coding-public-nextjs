@@ -33,21 +33,27 @@ jobs:
         run: |
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+            # Use a login shell to ensure all environment variables (like nvm, node, pm2) are correctly loaded
+            source ~/.bashrc
 
-            #Now we have access to EC2 and we will start the deployment.
-            cd apps/coding-ec-nextjs &&
-            git switch master &&
-            git fetch origin master &&
-            git pull origin master &&
-            npm ci &&
-            npm run build &&
+            # Navigate to the app directory
+            cd apps/coding-ec-nextjs
+
+            # Update the codebase
+            git switch master
+            git fetch origin master
+            git pull origin master
+
+            # Install dependencies and build
+            npm ci
+            npm run build
             
-            # Check if the app is already running
-            if pm2 list | grep -q 'coding-ec-nextjs'; then
-              echo "Application is running, restarting..."
+            # Check if PM2 knows about our app
+            if pm2 show coding-ec-nextjs > /dev/null 2>&1; then
+              echo "Application is registered in PM2, restarting..."
               pm2 restart coding-ec-nextjs
             else
-              echo "Application is not running, starting..."
+              echo "Application is not registered in PM2, starting..."
               pm2 start npm --name "coding-ec-nextjs" -- run start
             fi
           '
