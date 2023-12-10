@@ -230,7 +230,7 @@ export default function Header1({ headerCls, scroll, isToggled, handleToggle }) 
                                 </li>
                             </ul>
                             <div className="logoCenter" style={{ width: '151.453px' }}><div className="logo" data-mobile-logo="images/logo-01.png" data-sticky-logo="images/logo-01.png">
-                                <Link href="#hero-1"><img src="/images/logo-01-coding.png" alt="header-logo" /></Link>
+                                <Link href="/"><img src="/images/logo-01-coding.png" alt="header-logo" /></Link>
                             </div></div>
 
                             <ul className={isToggled ? "d-block" : "d-none"}>
