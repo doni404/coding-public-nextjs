@@ -28,6 +28,34 @@ body {
     font-weight: 300;
 }
 
+.scrollToTopButton {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background-color: red;
+    /* Red background */
+    border: none;
+    /* No border */
+    width: 40px;
+    /* Width of the button */
+    height: 40px;
+    /* Height of the button */
+    cursor: pointer;
+    /* Cursor pointer on hover */
+    display: none;
+    /* Start hidden */
+    justify-content: center;
+    /* Center the icon horizontally */
+    align-items: center;
+    /* Center the icon vertically */
+    color: white;
+    /* White text color */
+    font-size: 24px;
+    /* Size of the text */
+    z-index: 1000;
+    /* Ensure it's above other elements */
+}
+
 /*------------------------------------------------------------------*/
 /*  IE10 in Windows 8 and Windows Phone 8 Bug fix
 /*-----------------------------------------------------------------*/
@@ -7152,6 +7180,15 @@ input[type=number]::-webkit-inner-spin-button {
     #brands-1 .brand-logo {
         margin-top: -30px;
         padding: 30px 30px;
+    }
+
+    .scrollToTopButton {
+        right: 20px;
+        /* Closer to the edge */
+        bottom: 20px;
+        /* Closer to the edge */
+        font-size: 20px;
+        /* Smaller icon size */
     }
 }
 
