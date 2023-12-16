@@ -3,6 +3,7 @@ import Footer2 from "./Footer2";
 import Header1 from "./Header1";
 import PageHead from "./PageHead";
 import PageHero from "./PageHero";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 export default function Layout({ headerStyle, footerStyle, children, pageTitle, pageId, activePage, headerCls }) {
     const [scroll, setScroll] = useState(0)
@@ -38,6 +39,8 @@ export default function Layout({ headerStyle, footerStyle, children, pageTitle, 
                 {/* {footerStyle == 3 && <Footer3 />}
                 {footerStyle == 4 && <Footer4 />} */}
             </div>
+            
+            <ScrollToTopButton />
         </>
     )
 }
