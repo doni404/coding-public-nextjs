@@ -77,7 +77,7 @@ export default function Gallery2({ helperCls }) {
                         <div className="col-lg-10 offset-lg-1">
                             <div className="section-title mb-60 text-center">
                                 {/* Title 	*/}
-                                <h2 className="h2-xl red-color">CUSTOMER GALLERY</h2>
+                                <h2 className="h2-xl red-color">CUSTOMER<br className="break" /> GALLERY</h2>
                                 {/* Text */}
                                 <p className="p-xl">Explore the happiness our coconut pudding spreads. 
                                 Our photo collection highlights cherished moments from casual get-togethers to special family events, all sweetened by our pudding.

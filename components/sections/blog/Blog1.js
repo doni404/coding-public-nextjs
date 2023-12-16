@@ -10,7 +10,7 @@ export default function Blog1({helperCls}) {
                         <div className="col-lg-10 offset-lg-1">
                             <div className="section-title mb-60 text-center">
                                 {/* Title 	*/}
-                                <h2 className="h2-xl red-color">CODING EVENTS</h2>
+                                <h2 className="h2-xl red-color">CODING<br className="break" /> EVENTS</h2>
                                 {/* Text */}
                                 <p className="p-xl">Celebrate with our coconut pudding! Ideal for events, our catering service makes your occasions memorable. Reserve now for a sweet addition to your celebrations.
                                 </p>
