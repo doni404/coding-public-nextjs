@@ -8,7 +8,7 @@ export default function Brands1({helperCls}) {
                     {/* SECTION TITLE */}
                     <div className="row">
                         <div className="col-lg-10 offset-lg-1">
-                            <div className="section-title mb-60 text-center">
+                            <div className="section-title mb-30 text-center">
                                 {/* Title 	*/}
                                 <h2 className="h2-xl red-color">OUR TRUSTED PARTNERS</h2>
                                 {/* Text */}
